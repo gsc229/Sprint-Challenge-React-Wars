@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CharacterGrid from "./components/CharacterGrid";
+import StarShipsGrid from "./components/StarShipsGrid";
+import VehiclesGrid from "./components/VehiclesGrid";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -14,7 +16,13 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <CharacterGrid />
+      <div className="items-container">
+        <CharacterGrid />
+
+        <StarShipsGrid />
+
+        <VehiclesGrid />
+      </div>
     </div>
   );
 };

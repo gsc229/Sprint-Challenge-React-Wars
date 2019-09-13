@@ -9,18 +9,18 @@ const Card = styled.div`
   width: 30%;
 `;
 
-const CharacterCard = props => {
+const VehicleCard = props => {
   return (
     <Card className="card" key={props.name}>
       <h2>{props.name}</h2>
-      <div className="character-data">
-        <p>Height: {props.height} cm</p>
-        <p>Weight: {props.mass} kilos</p>
-        <p>Hair Color: {props.hairColor}</p>
-        <p>{props.height}</p>
+      <div className="ship-data">
+        <p>model: {props.model} cm</p>
+        <p>Manufacturer: {props.manufacturer} kilos</p>
+        <p>Cost in Credits: {props.costCredits}</p>
+        <p>Length: {props.long}</p>
       </div>
     </Card>
   );
 };
 
-export default CharacterCard;
+export default VehicleCard;

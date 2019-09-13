@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CharacterCard from "./CharacterCard";
+import StarShipCard from "./StarShipCard";
 /* import CharacterCard from "./CharacterCard"; */
 /* import styled from "styled-components"; */
 
-export default function CharacterGrid() {
-  const [peopleData, setPeopleData] = useState([]);
+export default function StarShipsGrid() {
+  const [starShipData, setStarShipData] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`https://swapi.co/api/people`)
+      .get(`https://swapi.co/api/starships/`)
       .then(response => {
         // response.data.results is an array of objects:
-        const peeps = response.data.results;
+        const ships = response.data.results;
 
-        setPeopleData(peeps);
+        setStarShipData(ships);
         //console.log's an array of objects. here can do peeps[0].name no problem.
-        console.log(`From Effect`, response.data);
+        //console.log(`From Ships Effect`, ships);
       })
       .catch(error => {
         console.log("Sorry, this ain't working", error);
@@ -25,16 +25,17 @@ export default function CharacterGrid() {
 
   return (
     <div className="container">
-      <h1>CHARACTERS</h1>
+      <h1>STARSHIPS</h1>
       <div className="entry">
-        {peopleData.map(person => {
+        {starShipData.map(ship => {
           return (
-            <CharacterCard
-              key={person.name}
-              name={person.name}
-              height={person.height}
-              mass={person.mass}
-              hair-color={person.hair_color}
+            <StarShipCard
+              key={ship.name}
+              name={ship.name}
+              model={ship.model}
+              manufacturer={ship.manufacturer}
+              costCredits={ship.cost_in_credits}
+              long={ship.length}
             />
           );
         })}
