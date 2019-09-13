@@ -21,3 +21,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.card {
+  padding: 20px;
+  font-weight: bolder;
+  text-align: left;
+  width: 500px;
+}
+.card h2 {
+  color: darkgreen;
+  font-weight: bolder;
+}

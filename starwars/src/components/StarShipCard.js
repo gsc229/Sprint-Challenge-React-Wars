@@ -6,7 +6,6 @@ const Card = styled.div`
   border: 3px solid black;
   color: white;
   margin: 20px auto;
-  width: 30%;
 `;
 
 const StarShipCard = props => {
@@ -14,7 +13,7 @@ const StarShipCard = props => {
     <Card className="card" key={props.name}>
       <h2>{props.name}</h2>
       <div className="ship-data">
-        <p>model: {props.model} cm</p>
+        <p>Model: {props.model} cm</p>
         <p>Manufacturer: {props.manufacturer} kilos</p>
         <p>Cost in Credits: {props.costCredits}</p>
         <p>Length: {props.long}</p>

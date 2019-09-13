@@ -6,7 +6,6 @@ const Card = styled.div`
   border: 3px solid black;
   color: white;
   margin: 20px auto;
-  width: 30%;
 `;
 
 const CharacterCard = props => {
@@ -17,7 +16,7 @@ const CharacterCard = props => {
         <p>Height: {props.height} cm</p>
         <p>Weight: {props.mass} kilos</p>
         <p>Hair Color: {props.hairColor}</p>
-        <p>{props.height}</p>
+        <p>Height: {props.height} cm</p>
       </div>
     </Card>
   );
